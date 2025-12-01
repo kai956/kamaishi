@@ -17,9 +17,6 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: "Kamaishi Global Resilience Hub",
   description: "A research-driven hub connecting Japan's structural disaster preparedness with international psychosocial recovery expertise.",
-  icons: {
-    icon: '/kamaishi-logo.png',
-  },
 };
 
 export default function RootLayout({
