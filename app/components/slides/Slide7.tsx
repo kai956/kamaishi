@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 interface Slide7Props {
   language: 'en' | 'jp';
 }
@@ -54,11 +56,19 @@ export default function Slide7({ language }: Slide7Props) {
 
   return (
     <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
-      {/* Background color instead of image */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600"></div>
+      {/* Background image - using kamaishi1.jpg */}
+      <div className="absolute inset-0">
+        <Image
+          src="/kamaishi 5.jpg"
+          alt="Kamaishi community resilience"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
 
-      {/* Blurred Overlay for Text Readability */}
-      <div className="absolute inset-0 bg-black/30"></div>
+      {/* Overlay for text readability */}
+      <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Centered Content */}
       <div className="relative z-10 flex h-full w-full items-center justify-center px-4 py-8 md:px-8">

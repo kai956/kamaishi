@@ -70,54 +70,38 @@ export default function Slide3({ language }: Slide3Props) {
 
   return (
     <div className="flex h-full w-full items-center justify-center px-4 py-4 md:px-8 md:py-6">
-      <div className="grid w-full max-w-6xl grid-cols-1 gap-6 md:grid-cols-5 md:gap-8">
-        {/* Left column - Content (60%) */}
-        <div className="flex flex-col justify-center md:col-span-3">
-          <h1 className="mb-3 font-serif text-2xl font-semibold tracking-tight text-zinc-900 md:text-4xl">
-            {t.title}
-          </h1>
-          <p className="mb-5 font-sans text-lg tracking-tight text-blue-600 md:mb-6 md:text-xl">
-            {t.subtitle}
-          </p>
+      <div className="w-full max-w-4xl">
+        <h1 className="mb-3 text-center font-serif text-2xl font-semibold tracking-tight text-zinc-900 md:mb-4 md:text-4xl">
+          {t.title}
+        </h1>
+        <p className="mb-5 text-center font-sans text-base tracking-tight text-blue-600 md:mb-6 md:text-xl">
+          {t.subtitle}
+        </p>
 
-          <div className="space-y-4 md:space-y-5">
-            <div className="space-y-3">
-              {t.partners.map((partner, idx) => (
-                <div key={idx} className="rounded-lg border border-blue-100 bg-blue-50/50 p-3 md:p-4">
-                  <p className="font-serif text-sm font-semibold text-blue-700 md:text-base">
-                    {partner.country}
-                  </p>
-                  <p className="mt-1 font-sans text-xs leading-snug tracking-tight text-zinc-700 md:text-sm">
-                    {partner.programs}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <div className="rounded-lg border-2 border-blue-400 bg-blue-200 p-4 md:p-5">
-              <p className="mb-1 font-sans text-xs font-medium tracking-tight text-blue-800 md:text-sm">
-                {t.highlightTitle}
-              </p>
-              <p className="font-serif text-base font-semibold leading-snug text-blue-900 md:text-lg">
-                {t.highlightText}
-              </p>
-              <p className="mt-1 font-sans text-xs text-blue-700 md:text-sm">
-                {t.highlightSource}
-              </p>
-            </div>
+        <div className="space-y-4 md:space-y-5">
+          <div className="space-y-3">
+            {t.partners.map((partner, idx) => (
+              <div key={idx} className="rounded-lg border border-blue-100 bg-blue-50/50 p-3 md:p-4">
+                <p className="font-serif text-sm font-semibold text-blue-700 md:text-base">
+                  {partner.country}
+                </p>
+                <p className="mt-1 font-sans text-xs leading-snug tracking-tight text-zinc-700 md:text-sm">
+                  {partner.programs}
+                </p>
+              </div>
+            ))}
           </div>
-        </div>
 
-        {/* Right column - Placeholder boxes (40%) */}
-        <div className="md:col-span-2">
-          <div className="grid grid-cols-2 gap-3">
-            <div className="col-span-1">
-              <div className="h-full min-h-[300px] w-full rounded-lg bg-blue-100 md:min-h-[400px]"></div>
-            </div>
-            <div className="col-span-1 flex flex-col gap-3">
-              <div className="h-full w-full rounded-lg bg-blue-200"></div>
-              <div className="h-full w-full rounded-lg bg-blue-300"></div>
-            </div>
+          <div className="rounded-lg border-2 border-blue-400 bg-blue-200 p-4 md:p-5">
+            <p className="mb-1 font-sans text-xs font-medium tracking-tight text-blue-800 md:text-sm">
+              {t.highlightTitle}
+            </p>
+            <p className="font-serif text-base font-semibold leading-snug text-blue-900 md:text-lg">
+              {t.highlightText}
+            </p>
+            <p className="mt-1 font-sans text-xs text-blue-700 md:text-sm">
+              {t.highlightSource}
+            </p>
           </div>
         </div>
       </div>

@@ -99,13 +99,13 @@ export default function Slide8({ language }: Slide8Props) {
   const t = content[language];
 
   return (
-    <div className="flex h-full w-full items-center justify-center overflow-y-auto px-4 py-6 pt-32 md:overflow-hidden md:px-8 md:py-8 md:pt-8">
+    <div className="flex h-full w-full items-center justify-center overflow-y-auto px-4 py-6 pt-20 md:overflow-hidden md:px-8 md:py-8 md:pt-8">
       <div className="w-full max-w-6xl py-2">
         <h1 className="mb-4 text-center font-serif text-2xl font-semibold tracking-tight text-zinc-900 md:mb-6 md:text-4xl">
           {t.title}
         </h1>
 
-        <div className="mb-6 rounded-lg border-2 border-blue-300 bg-blue-50 p-5 md:mb-8 md:p-6">
+        <div className="mb-6 rounded-lg border-2 border-blue-300 bg-blue-50 p-4 md:mb-8 md:p-6">
           <p className="font-sans text-xs leading-relaxed tracking-tight text-zinc-800 md:text-sm">
             {t.summary}
           </p>
@@ -123,7 +123,7 @@ export default function Slide8({ language }: Slide8Props) {
           {t.referencesTitle}
         </h2>
 
-        <div className="mb-16 grid grid-cols-1 gap-2 md:mb-0 md:grid-cols-2 md:gap-3">
+        <div className="mb-20 grid grid-cols-1 gap-2 md:mb-0 md:grid-cols-2 md:gap-3">
           {t.references.map((ref, index) => (
             <div
               key={index}

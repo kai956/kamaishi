@@ -54,18 +54,18 @@ export default function Presentation() {
   return (
     <div className="relative h-screen w-full bg-white">
       {/* Top Bar - Logo and Language */}
-      <div className="absolute left-8 right-8 top-8 z-10 flex items-center justify-between">
+      <div className="absolute left-4 right-4 top-4 z-10 flex items-center justify-between md:left-8 md:right-8 md:top-8">
         {/* Logo - Left */}
         <Image
           src="/kamaishi-logo.png"
           alt="Kamaishi Global Resilience Hub"
           width={40}
           height={40}
-          className="h-8 w-auto md:h-10"
+          className="h-6 w-auto md:h-8 lg:h-10"
         />
 
         {/* Language Toggle - Right */}
-        <div className="flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5">
+        <div className="flex items-center gap-1 rounded-full border border-blue-200 bg-white px-2 py-1 md:px-3 md:py-1.5">
           <button
             onClick={() => setLanguage('en')}
             className={`rounded-full px-2 py-0.5 text-xs font-medium transition-colors ${language === 'en'
@@ -106,11 +106,11 @@ export default function Presentation() {
       </AnimatePresence>
 
       {/* Navigation Buttons */}
-      <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 items-center gap-3">
+      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 md:bottom-8 md:gap-3">
         <motion.button
           onClick={goToPrevious}
           disabled={currentSlide === 0}
-          className="flex h-8 w-8 items-center justify-center rounded-full border border-blue-200 bg-white text-blue-600 transition-colors hover:border-blue-300 hover:bg-blue-50 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:border-blue-200 disabled:hover:bg-white"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-200 bg-white text-blue-600 transition-colors hover:border-blue-300 hover:bg-blue-50 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:border-blue-200 disabled:hover:bg-white md:h-8 md:w-8"
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.95 }}
           transition={{
@@ -119,22 +119,22 @@ export default function Presentation() {
             damping: 25
           }}
         >
-          <ChevronLeft className="h-4 w-4" />
+          <ChevronLeft className="h-5 w-5 md:h-4 md:w-4" />
         </motion.button>
 
         {/* Slide Counter */}
-        <div className="flex items-center gap-2 rounded-full border border-blue-200 bg-white px-3 py-1">
-          <span className="text-xs font-medium text-blue-600">
+        <div className="flex items-center gap-2 rounded-full border border-blue-200 bg-white px-3 py-1.5 md:px-3 md:py-1">
+          <span className="text-xs font-medium text-blue-600 md:text-xs">
             {currentSlide + 1}
           </span>
-          <span className="text-xs text-blue-300">/</span>
-          <span className="text-xs text-zinc-500">{slides.length}</span>
+          <span className="text-xs text-blue-300 md:text-xs">/</span>
+          <span className="text-xs text-zinc-500 md:text-xs">{slides.length}</span>
         </div>
 
         <motion.button
           onClick={goToNext}
           disabled={currentSlide === slides.length - 1}
-          className="flex h-8 w-8 items-center justify-center rounded-full border border-blue-200 bg-white text-blue-600 transition-colors hover:border-blue-300 hover:bg-blue-50 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:border-blue-200 disabled:hover:bg-white"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-200 bg-white text-blue-600 transition-colors hover:border-blue-300 hover:bg-blue-50 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:border-blue-200 disabled:hover:bg-white md:h-8 md:w-8"
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.95 }}
           transition={{
@@ -143,7 +143,7 @@ export default function Presentation() {
             damping: 25
           }}
         >
-          <ChevronRight className="h-4 w-4" />
+          <ChevronRight className="h-5 w-5 md:h-4 md:w-4" />
         </motion.button>
       </div>
     </div>
